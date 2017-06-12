@@ -1,6 +1,12 @@
 ---
 driver:
   name: vagrant
+  driver_config:
+  customize:
+    memory: 2048
+  network:
+    - ["forwarded_port", {guest: 3000, host: 3000}]
+    - ["forwarded_port", {guest: 80, host: 8080}]
 
 provisioner:
   name: chef_zero
@@ -13,8 +19,7 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.3
+  - name: ubuntu-14.04
 
 suites:
   - name: default
