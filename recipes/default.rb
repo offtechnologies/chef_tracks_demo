@@ -6,3 +6,5 @@
 
 # setup apt and basic packages
 include_recipe 'tracks_demo::system_setup'
+# setup deployment user
+include_recipe 'tracks_demo::user_setup'
