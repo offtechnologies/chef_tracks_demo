@@ -12,3 +12,18 @@ apt_update 'daily' do
   frequency 86_400
   action :periodic
 end
+
+# install basic pakages
+package %w(build-essential libpq-dev zlib1g zlib1g-dev libmysqlclient-dev libsqlite3-dev libgmp3-dev runit) do
+  action :install
+  options '--no-install-recommends'
+end
+
+# timezone setup
+bash 'set timezone' do
+  code <<-EOH
+    echo 'Europe/Berlin' > /etc/timezone
+    dpkg-reconfigure -f noninteractive tzdata
+  EOH
+  not_if "date | grep -q 'CEST'"
+end
