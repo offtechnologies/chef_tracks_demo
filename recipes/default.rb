@@ -18,3 +18,5 @@ include_recipe 'tracks_demo::source_setup'
 include_recipe 'tracks_demo::tracks_setup'
 # setup runit service
 include_recipe 'tracks_demo::runit_setup'
+# setup nginx reverse proxy
+include_recipe 'tracks_demo::nginx_setup'
