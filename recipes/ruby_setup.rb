@@ -21,6 +21,11 @@ package "ruby#{node['ruby_setup']['ruby_version']}" do
   action :upgrade
 end
 
+# install ruby-dev needed for bundler
+package "ruby#{node['ruby_setup']['ruby_version']}-dev" do
+  action :upgrade
+end
+
 # Install bundler
 gem_package 'bundler' do
   gem_binary '/usr/bin/gem'

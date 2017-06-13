@@ -22,7 +22,7 @@ end
 # timezone setup
 bash 'set timezone' do
   code <<-EOH
-    echo 'Europe/Berlin' > /etc/timezone
+    echo #{node['system_setup']['timezone']} > /etc/timezone
     dpkg-reconfigure -f noninteractive tzdata
   EOH
   not_if "date | grep -q 'CEST'"

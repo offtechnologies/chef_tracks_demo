@@ -1,3 +1,6 @@
+# system_setup
+default['system_setup']['timezone']      = 'Europe/Berlin'
+
 # username and group
 default['user_setup']['user']            = 'tracks_admin'
 default['user_setup']['group']           = 'tracks_admin'
@@ -15,3 +18,8 @@ default['source_setup']['file_name']     = 'v'
 default['source_setup']['file_version']  = '2.3.0'
 default['source_setup']['service_name']  = 'tracks_demo'
 default['source_setup']['dest_dir']      = "/srv/#{node['source_setup']['service_name']}"
+
+# tracks_setup
+default['tracks_setup']['db_adapter']    = 'postgresql'
+default['tracks_setup']['db_host']       = '127.0.0.1'
+default['tracks_setup']['db_encoding']   = 'unicode'
