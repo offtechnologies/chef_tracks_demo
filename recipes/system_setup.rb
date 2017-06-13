@@ -14,7 +14,7 @@ apt_update 'daily' do
 end
 
 # install basic pakages
-package %w(build-essential libpq-dev zlib1g zlib1g-dev libmysqlclient-dev libsqlite3-dev libgmp3-dev runit) do
+package %w(build-essential libpq-dev zlib1g zlib1g-dev libmysqlclient-dev libsqlite3-dev libgmp3-dev) do
   action :install
   options '--no-install-recommends'
 end

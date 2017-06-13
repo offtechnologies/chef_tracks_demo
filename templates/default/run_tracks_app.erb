@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# This file is managed by Chef, using the <%= node.name %> cookbook.
+# Editing this file by hand is highly discouraged!
+#
+set -e
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+APP_ROOT=<%= @release_dir %>
+cd $APP_ROOT
+exec 2>&1
+exec chpst -u <%= @deploy_user %> <%= @runit_command %>

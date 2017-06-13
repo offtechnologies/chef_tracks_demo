@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# This file is managed by Chef, using the <%= node.name %> cookbook.
+# Editing this file by hand is highly discouraged!
+#
+exec svlogd -tt /var/log/<%= @service_name %>
