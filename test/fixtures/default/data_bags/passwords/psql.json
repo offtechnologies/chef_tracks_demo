@@ -1,5 +1,5 @@
 {
-  "id": "mysql",
+  "id": "psql",
   "root_password": "fakerootpassword",
   "admin_password": "fakeadminpassword"
 }

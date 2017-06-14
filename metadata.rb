@@ -1,10 +1,10 @@
 name 'tracks_demo'
 maintainer 'OFF Technologies'
-maintainer_email 'you@example.com'
-license 'Apache v2.0'
+maintainer_email 'offtechnologies@example.com'
+license 'apachev2'
 description 'Installs/Configures tracks_demo'
 long_description 'Installs/Configures tracks_demo'
-version '0.1.0'
+version '1.0'
 chef_version '>= 12.1' if respond_to?(:chef_version)
 supports 'ubuntu', '= 14.04'
 
