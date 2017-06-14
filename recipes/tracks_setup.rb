@@ -31,10 +31,7 @@ end
 bash 'boundle install' do
   cwd release_dir
   user deploy_user
-  environment ({
-    'HOME' => home_dir,
-    'USER' => deploy_user
-  })
+  environment 'HOME' => home_dir
   code <<-EOH
     /usr/local/bin/bundle install --quiet --no-deployment
     /usr/local/bin/bundle install --quiet --deployment --without #{excluded_groups.join(' ')}
@@ -72,10 +69,7 @@ end
 bash 'migration' do
   cwd release_dir
   user deploy_user
-  environment ({
-    'HOME' => home_dir,
-    'USER' => deploy_user
-  })
+  environment 'HOME' => home_dir
   code <<-EOH
     /usr/local/bin/bundle exec rake db:migrate RAILS_ENV=production
     /usr/local/bin/bundle exec rake assets:precompile RAILS_ENV=production

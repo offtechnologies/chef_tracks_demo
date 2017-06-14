@@ -44,7 +44,7 @@ template "/etc/sv/#{service_name}/log/run" do
   )
 end
 
-# create directories for runit scripts
+# create directories for service logs
 directory "/var/log/#{service_name}" do
   mode '0755'
   owner deploy_user

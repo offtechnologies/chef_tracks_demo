@@ -21,9 +21,6 @@ package 'nginx'
 file default_path do
   action :delete
 end
-# execute 'rm -f #{default_path}' do
-#  only_if { File.exists?(default_path) }
-# end
 
 # start nginx service
 service 'nginx' do

@@ -20,3 +20,5 @@ include_recipe 'tracks_demo::tracks_setup'
 include_recipe 'tracks_demo::runit_setup'
 # setup nginx reverse proxy
 include_recipe 'tracks_demo::nginx_setup'
+# setup basic security
+include_recipe 'tracks_demo::security_setup'

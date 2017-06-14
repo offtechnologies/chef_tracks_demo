@@ -23,3 +23,10 @@ default['source_setup']['dest_dir']      = "/srv/#{node['source_setup']['service
 default['tracks_setup']['db_adapter']    = 'postgresql'
 default['tracks_setup']['db_host']       = '127.0.0.1'
 default['tracks_setup']['db_encoding']   = 'unicode'
+
+# security_setup
+default['security_setup']['RootLogin']   = 'no'
+default['security_setup']['CRAM']        = 'no'
+default['security_setup']['PassAuth']    = 'no'
+default['security_setup']['UsePAM']      = 'no'
+default['security_setup']['UseDNS']      = 'no'
